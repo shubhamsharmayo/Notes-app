@@ -20,6 +20,7 @@ router.post('/', async(req, res) => {
   const email = req.body.email
   const password = req.body.password
     // console.log(req.body)
+    
     try {
       const user = await Signup.findOne({email})
       if (!user || user.password !== password){
