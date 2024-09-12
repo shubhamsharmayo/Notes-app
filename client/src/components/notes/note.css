@@ -1,0 +1,125 @@
+.main{
+    width: 98.7vw;
+    height: auto;
+    /* border: 1px solid white; */
+    
+}
+.title {
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid white; */
+    line-break: anywhere;
+    
+}
+/* .card{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.list{
+    /* display: flex;
+    flex-wrap: wrap; */
+    gap: 20px;
+    padding:30px;
+    list-style: none;
+    /* justify-content: center; */
+    display: inline-block;
+  
+}
+.listcard{
+    margin: 10px;
+    /* border: 1px solid white; */
+    box-shadow: -2px 3px 4px rgb(0, 0, 0);
+    width: 300px;
+    display: flex;
+    float:right;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 10px;
+   border-radius: 10px;
+    /* min-height: 200px; */
+    padding: 20px;
+   
+}
+.desc{
+    /* border: 1px solid white; */
+    width: 100%;
+    height: fit-content ;
+    white-space: pre-wrap;
+    line-break: anywhere;
+}
+.cardbtn{
+    display: flex;
+    /* border: 1px solid white; */
+    align-items: center;
+    margin-top: 50px;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
+    
+    opacity: 0;
+    transition: opacity 700ms ease;
+}
+.listcard:hover .cardbtn{
+    opacity: 1;
+}
+.editlabel, .deletelabel{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    
+    background: rgb(75, 75, 75);
+    width: fit-content;
+    height: fit-content;
+    padding: 1px 7px 1px 7px;
+    border-radius: 4px;
+    transition: opacity 700ms ease 100ms;
+    font-size: 14px;
+    margin-top: 5px;
+    
+}
+.editbtn:hover .editlabel{
+    display: block;
+    font-size: 14px;
+    
+}
+.deletebtn:hover .deletelabel{
+    display: block;
+    font-size: 14px;
+}
+
+.color{
+    width: 28px;
+    outline: none;
+    border: none;
+    height: 25px;
+}
+@media  screen and (max-width: 1358px) {
+    .list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+  
+        flex-basis: 100;
+    }
+  .listcard{
+      display: flex;
+      float: none;
+      justify-content: center;
+      align-items: center;
+      
+      
+  }
+}
+@media  screen and (max-width: 715px) {
+
+    .list{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .listcard{
+        width: 100%;
+    }
+  }

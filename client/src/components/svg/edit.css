@@ -1,0 +1,59 @@
+.taskform2{
+    box-shadow: 0px 0px 2px;
+    width: 110%;
+    padding: 12px 11px 12px 11px;
+    border-radius: 11px;
+    position: relative;
+    right: 15px;
+    
+}
+
+
+.formcontainer2>form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+textarea.edit-control{
+    width: 100%;
+    min-height: 130px;
+    padding: 8px;
+    resize: vertical;
+    /* border-radius: 11px; */
+    outline: none;
+    transition: border-radius 0.5s ease;
+    background: transparent;
+    border: 1px solid white;
+}
+.edit-control-title{
+    padding: 10px;
+    /* border-radius: 10px; */
+    outline: none;
+    background: transparent;
+    transition: border-radius 0.5s ease;
+    border: 1px solid white;
+}
+textarea.edit-control:focus,.edit-control-title:focus{
+    border: 1px solid ;
+    border-color: rgb(21, 250, 0);
+    border-radius: 10px;
+}
+
+.color{
+    border: none;
+    cursor: pointer;
+}
+.editbtn2 button{
+    cursor: pointer;
+    width: 55px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(42, 43, 42);
+    border: none;
+    box-shadow: 0px 0px 2px;
+}
+.editbtn2{
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,111 @@
+/* Basic reset for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Center the login page content */
+  .loginpage {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* background: linear-gradient(135deg, #e0f7fa, #06b600, rgb(231, 112, 112),blue); */
+    
+  }
+  
+  /* Styling for the form container */
+  .loginform {
+    /* background: #ffffff; */
+    backdrop-filter: blur(59px);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* max-width: 400px; */
+    width: 150%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    right: 60px;
+  }
+  
+  .loginform:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Styling the input fields */
+  .loginform label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .loginform input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .loginform input:focus {
+    border-color: #00796b;
+  }
+  
+  /* Styling the submit button */
+  .loginform button {
+    width: 100%;
+    padding: 12px;
+    background: #00796b;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .loginform button:hover {
+    background: #004d40;
+  }
+  
+  /* Styling for invalid credentials message */
+  .invalid {
+    color: #d32f2f;
+    margin-bottom: 15px;
+    font-size: 14px;
+    
+  }
+  
+  
+  /* Styling the signup link */
+  .signuplink {
+    display: block;
+    margin-top: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+    left: 70px;
+  }
+  
+  .signuplink:hover {
+    color: #004d40;
+  }
+  
+  .loginbackground{
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    min-width: 2500px;
+    
+}

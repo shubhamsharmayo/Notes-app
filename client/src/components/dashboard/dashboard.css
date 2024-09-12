@@ -1,0 +1,137 @@
+.taskform{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-direction: column; */
+    width: 97vw;
+    height: 1000px;
+    
+    position: fixed;
+    z-index: 1;
+    height: fit-content;
+    
+}
+.formcontainer>form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+}
+.dot{
+    display: flex;
+    flex-wrap: wrap;
+}
+.notebtncont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notesbtn{
+    margin: 30px;
+    cursor: pointer;
+    width: 95px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: green;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+.notesbtn:hover, .formbtn button:hover {
+    background-color: rgb(2, 179, 2);
+}
+.formcontainer{
+    box-shadow: 0px 0px 4px rgb(0, 0, 0);
+    /* background: url(../../assets/pngtree-faceted-abstract-background-in-3d-with-shimmering-iridescent-metallic-texture-of-picture-image_3653595.jpg); */
+    color: #ffffff;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    height: 430px;
+    position: absolute;
+    z-index: 1;
+    top: 2%;
+    border-radius: 11px;
+    -webkit-backdrop-filter: blur(15px);
+
+    backdrop-filter: blur(15px);
+}
+.formbtn{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 26%;
+    top: -15px;
+}
+
+.formbtn button{
+    cursor: pointer;
+    width: 55px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: green;
+    border: none;
+}
+
+.form-control {
+    width: 80%;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #ffffff;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+    background-color: #000000;
+    box-shadow: inset 0px 0px 2px rgb(255, 255, 255);
+    transition: border 0.3s, box-shadow 0.3s;
+    outline: none;
+    height: auto;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: inset 0 0 8px rgb(0, 102, 255);
+    outline: none;
+  }
+  
+  .form-control::placeholder {
+    color: #aaa;
+  }
+  
+  textarea.form-control {
+    resize:none;
+    overflow-y: auto;
+    min-height: 220px;
+    white-space: pre-wrap;
+  }
+  
+  .form-control:hover {
+    border-color: #007bff;
+  }
+  .colors{
+    display: flex;
+    
+    align-items: center;
+    gap: 15px;
+  
+    
+  }
+  .colorbtn{
+    width: 50px;
+  }
+
+  @media  screen and (max-width: 715px) {
+    .formcontainer{
+      width: 100%;
+    }
+  }
