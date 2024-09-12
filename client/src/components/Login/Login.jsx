@@ -19,7 +19,7 @@ const Login = () => {
         formState: { errors, isSubmitting },
       } = useForm()
       const onSubmit = async (data) => {
-        let submit = await fetch('http://localhost:3045/',{method:"POST",headers: {
+        let submit = await fetch('https://notes-app-murex-seven.vercel.app/',{method:"POST",headers: {
           "Content-Type": "application/json" 
         }, body: JSON.stringify(data)})
         let res = await submit.text()
