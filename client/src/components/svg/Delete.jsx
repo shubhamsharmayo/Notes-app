@@ -9,7 +9,7 @@ const Delete = ({datainuse,setdatainuse}) => {
  
     const handleDelete = async (id) => {
         try {
-          const data =  await axios.delete(`https://notes-app-silk-zeta.vercel.app/profile/delete/${id}`);
+          const data =  await axios.delete(`https://notes-app-henna-nine.vercel.app/profile/delete/${id}`);
             console.log(data.data)
             if(data.data=='Task deleted'){
               setdatainuse((prevData) => prevData.filter((item) => item._id !== id));

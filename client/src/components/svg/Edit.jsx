@@ -21,7 +21,7 @@ const Edit = ({ datainuse, setdatainuse }) => {
   const handleUpdate = async (formData) => {
     try {
       const response = await axios.put(
-        `https://notes-app-silk-zeta.vercel.app/profile/update/${isEditing}`,
+        `https://notes-app-henna-nine.vercel.app/profile/update/${isEditing}`,
         formData
       );
       if (response.status === 200) {
