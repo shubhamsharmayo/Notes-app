@@ -15,6 +15,10 @@ router.use(cors())
 router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
+router.get('/',(req,res)=>{
+  res.send("hello")
+})
+
 
 router.post('/', async(req, res) => {
   const email = req.body.email
