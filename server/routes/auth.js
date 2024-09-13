@@ -1,14 +1,7 @@
 import express, { Router } from 'express'
 import bodyParser from 'body-parser'
-import mongoose from 'mongoose'
 import cors from 'cors'
-
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 import { Signup } from '../models/Signup.js'
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 const router = express.Router()
 
 router.use(cors())
