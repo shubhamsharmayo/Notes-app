@@ -19,7 +19,7 @@ const Login = () => {
         formState: { errors, isSubmitting },
       } = useForm()
       const onSubmit = async (data) => {
-        let submit = await fetch('https://notes-app-henna-nine.vercel.app/',{method:"POST",headers: {
+        let submit = await fetch('https://backend-one-alpha-67.vercel.app/',{method:"POST",headers: {
           "Content-Type": "application/json" 
         }, body: JSON.stringify(data)})
         let res = await submit.text()
