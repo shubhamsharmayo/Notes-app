@@ -37,7 +37,7 @@ const Dashboard = () => {
       
       const requestData = { ...data, user: nameofuser.replaceAll('"','') };
       
-      let submit = await fetch(`https://backend-one-alpha-67.vercel.app/profile/profile/${nameofuser}`,{
+      let submit = await fetch(`http://localhost:3045/profile/profile/${nameofuser}`,{
         method: "POST",
         headers: {
           
