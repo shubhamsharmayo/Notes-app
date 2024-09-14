@@ -8,12 +8,7 @@ import App from '../../client/src/App.jsx'
 const app = express()
 const port = 3045
 app.use(express.json())
-const corsConfig = {
-  origin:"*",
-  Credential: true,
-  methods: ["GET","POST","PUT","DELETE"]
-}
-app.options("",cors(corsConfig))
+
 app.use(cors())
 
 
