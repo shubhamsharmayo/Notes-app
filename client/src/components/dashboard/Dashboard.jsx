@@ -52,12 +52,17 @@ const Dashboard = () => {
       // console.log(res)
       setfetchedata(res)
     }
-    
+    const token = localStorage.getItem('token')
     useEffect(() => {
       async function fetch(){
         setloader(true)
         try {
-          let submit = await axios.get(`https://backend-lyart-six.vercel.app/profile/${nameofuser.replaceAll('"','')}`)
+          let submit = await axios.get(`https://backend-lyart-six.vercel.app/profile/${nameofuser.replaceAll('"','')}`,{
+            headers: {
+              'authorization': `Bearer ${token}`,  // Adding the Authorization header
+              'Content-Type': 'application/json'   // You can add other headers like Content-Type
+            }
+          })
         
         //  console.log(submit.data)
          setdatainuse(submit.data)
@@ -69,6 +74,7 @@ const Dashboard = () => {
        
          }
          fetch()
+         
      }, [nameofuser,fetchedata])
 
 

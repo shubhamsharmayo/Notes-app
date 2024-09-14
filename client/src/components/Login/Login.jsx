@@ -36,7 +36,7 @@ const Login = () => {
           setverify(true)
         }
 
-        console.log(res.token)
+        console.log(res.username)
 
     }
     
