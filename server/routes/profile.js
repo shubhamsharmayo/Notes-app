@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import { Tasks } from '../models/tasks.js'
+import { authenticateToken } from '../middleware/authentication.js'
 
 const router = express.Router()
 
@@ -30,7 +31,7 @@ router.post('/profile/:username', async(req, res) => {
 
 });
 
-router.get('/:user',async(req,res)=>{
+router.get('/:user',authenticateToken,async(req,res)=>{
     const {user} = req.params
     const found = await Tasks.find({user})
     console.log(user)

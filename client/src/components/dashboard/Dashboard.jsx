@@ -37,7 +37,7 @@ const Dashboard = () => {
       
       const requestData = { ...data, user: nameofuser.replaceAll('"','') };
       
-      let submit = await fetch(`https://backend-lyart-six.vercel.app/profile/profile/${nameofuser}`,{
+      let submit = await fetch(`http://localhost:3045/profile/profile/${nameofuser}`,{
         method: "POST",
         headers: {
           
@@ -57,7 +57,7 @@ const Dashboard = () => {
       async function fetch(){
         setloader(true)
         try {
-          let submit = await axios.get(`https://backend-lyart-six.vercel.app/profile/${nameofuser.replaceAll('"','')}`)
+          let submit = await axios.get(`http://localhost:3045/profile/${nameofuser.replaceAll('"','')}`)
         
         //  console.log(submit.data)
          setdatainuse(submit.data)
