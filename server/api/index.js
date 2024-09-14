@@ -3,7 +3,7 @@ import cors from 'cors'
 import Auth from '../routes/auth.js'
 import mongoose from 'mongoose'
 import Profile from '../routes/profile.js'
-import App from '../../client/src/App.jsx'
+
 
 const app = express()
 const port = 3045
