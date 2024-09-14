@@ -18,7 +18,7 @@ const Signup = () => {
       } = useForm()
 
       const onSubmit = async (data) => {
-        let submit = await fetch('https://backend-beta-ruby.vercel.app/signup',{method:"POST",headers: {
+        let submit = await fetch('https://backend-lyart-six.vercel.app/signup',{method:"POST",headers: {
           "Content-Type": "application/json" 
         }, body: JSON.stringify(data)})
         
