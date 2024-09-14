@@ -14,7 +14,7 @@ const corsConfig = {
   methods: ["GET","POST","PUT","DELETE"]
 }
 app.options("",cors(corsConfig))
-app.use(cors(corsConfig))
+app.use(cors())
 
 
 mongoose.connect("mongodb+srv://shubham:qmPmj57GZjzMEMDn@cluster0.k6hoa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
