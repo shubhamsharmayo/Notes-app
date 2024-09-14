@@ -57,7 +57,7 @@ const Dashboard = () => {
       async function fetch(){
         setloader(true)
         try {
-          let submit = await axios.get(`https://backend-one-alpha-67.vercel.app/profile/${nameofuser.replaceAll('"','')}`)
+          let submit = await axios.get(`http://localhost:3045/profile/${nameofuser.replaceAll('"','')}`)
         
         //  console.log(submit.data)
          setdatainuse(submit.data)
