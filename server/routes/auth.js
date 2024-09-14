@@ -9,7 +9,7 @@ router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
 router.get('/',(req,res)=>{
-  res.send("hello")
+  res.json({message:"hello"})
 })
 
 

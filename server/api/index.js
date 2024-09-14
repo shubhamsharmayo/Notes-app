@@ -1,11 +1,11 @@
 import express from 'express'
 import cors from 'cors'
-import Auth from './routes/auth.js'
+import Auth from '../routes/auth.js'
 import mongoose from 'mongoose'
-import Profile from './routes/profile.js'
+import Profile from '../routes/profile.js'
 
 const app = express()
-const port = 3000
+const port = 3045
 app.use(express.json())
 app.use(cors())
 
