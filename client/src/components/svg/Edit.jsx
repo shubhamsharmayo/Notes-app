@@ -21,7 +21,7 @@ const Edit = ({ datainuse, setdatainuse }) => {
   const handleUpdate = async (formData) => {
     try {
       const response = await axios.put(
-        `http://localhost:3045/profile/update/${isEditing}`,
+        `https://backend-lyart-six.vercel.app/profile/update/${isEditing}`,
         formData
       );
       if (response.status === 200) {
