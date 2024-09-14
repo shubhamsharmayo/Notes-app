@@ -33,7 +33,7 @@ router.post('/', async(req, res) => {
           Secret, // Secret key
           { expiresIn: '1h' } // Token expiration time
       );
-        return res.json({username:user.username})
+        return res.json(token,{username:user.username})
     }
     } catch (error) {
       res.status(400).json(error)
