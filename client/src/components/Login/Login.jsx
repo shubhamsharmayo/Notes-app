@@ -23,7 +23,7 @@ const Login = () => {
         let submit = await fetch('https://backend-lyart-six.vercel.app/',{method:"POST",headers: {
           "Content-Type": "application/json" 
         }, body: JSON.stringify(data)})
-        let res = await submit.json()
+        let res = await submit.text()
         
 
         
