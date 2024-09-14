@@ -37,7 +37,7 @@ const Dashboard = () => {
       
       const requestData = { ...data, user: nameofuser.replaceAll('"','') };
       
-      let submit = await fetch(`https://backend-lyart-six.vercel.app/profile/profile/${nameofuser}`,{
+      let submit = await fetch(`http://localhost:3045/profile/profile/${nameofuser}`,{
         method: "POST",
         headers: {
           
@@ -52,19 +52,15 @@ const Dashboard = () => {
       // console.log(res)
       setfetchedata(res)
     }
-    const token = localStorage.getItem('token')
+    
     useEffect(() => {
+      const token = localStorage.getItem('token')
       async function fetch(){
         setloader(true)
         try {
-          let submit = await axios.get(`https://backend-lyart-six.vercel.app/profile/${nameofuser.replaceAll('"','')}`,{
-            headers: {
-              'authorization': `Bearer ${token}`,  // Adding the Authorization header
-              'Content-Type': 'application/json'   // You can add other headers like Content-Type
-            }
-          })
+          let submit = await axios.get(`http://localhost:3045/profile/${nameofuser.replaceAll('"','')}`)
         
-        //  console.log(submit.data)
+         
          setdatainuse(submit.data)
          setloader(false)
         } catch (error) {
@@ -74,7 +70,7 @@ const Dashboard = () => {
        
          }
          fetch()
-         
+        
      }, [nameofuser,fetchedata])
 
 

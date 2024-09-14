@@ -9,7 +9,7 @@ const Delete = ({datainuse,setdatainuse}) => {
  
     const handleDelete = async (id) => {
         try {
-          const data =  await axios.delete(`https://backend-lyart-six.vercel.app/profile/delete/${id}`);
+          const data =  await axios.delete(`http://localhost:3045/profile/delete/${id}`);
             console.log(data.data)
             if(data.data=='Task deleted'){
               setdatainuse((prevData) => prevData.filter((item) => item._id !== id));

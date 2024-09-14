@@ -31,14 +31,14 @@ router.post('/profile/:username', async(req, res) => {
 
 });
 
-router.get('/:user',authenticateToken,async(req,res)=>{
+router.get('/:user',async(req,res)=>{
     const {user} = req.params
     const found = await Tasks.find({user})
     console.log(user)
     res.json(found)
 })
 
-router.delete('/delete/:id',authenticateToken, async (req, res) => {
+router.delete('/delete/:id', async (req, res) => {
     console.log(req.params.id)
     try {
         const taskid = await Tasks.findByIdAndDelete(req.params.id);
@@ -52,7 +52,7 @@ router.delete('/delete/:id',authenticateToken, async (req, res) => {
     }
   });
 
-  router.put('/update/:id',authenticateToken, async (req, res) => {
+  router.put('/update/:id', async (req, res) => {
     const { id } = req.params;
     const {title,description,color} = req.body;
 

@@ -9,7 +9,7 @@ export const authenticateToken = (req, res, next) => {
     if (!token) return res.status(401).json({ message: 'Access denied, token missing!' });
 
     jwt.verify(token, JWT_SECRET, (err, user) => {
-        if (err) return res.status(403).json({ message: 'Invalid token!' });
+        if (err) return res.status(403).json({ message: 'Invalid token!' })
 
         req.user = user; // Attach user info (from the token) to the request object
         next();

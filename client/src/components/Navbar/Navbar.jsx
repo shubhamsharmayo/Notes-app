@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className='navbar'>
       <img className='logo' src={noteimg} alt="" />
       <div className='logout'>
-          <h1>Hi {nameofuser}</h1>
+          <h1>Hi {nameofuser.replaceAll('"','')}</h1>
       <button onClick={()=>{navigate('/')}}>LogOut</button>
       </div>
     

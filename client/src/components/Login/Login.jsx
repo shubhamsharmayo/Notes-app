@@ -20,23 +20,22 @@ const Login = () => {
         formState: { errors, isSubmitting },
       } = useForm()
       const onSubmit = async (data) => {
-        let submit = await fetch('https://backend-lyart-six.vercel.app/',{method:"POST",headers: {
+        let submit = await fetch('http://localhost:3045/',{method:"POST",headers: {
           "Content-Type": "application/json" 
         }, body: JSON.stringify(data)})
         let res = await submit.text()
         
 
-        
         if(res!=='"not found"'){
-          setNameofuser(res.username);
+          setNameofuser(res);
           setverify(false)
           navigate('/dashboard')
-          localStorage.setItem('token', res.token);
+          
         }else{
           setverify(true)
         }
 
-        console.log(res.username)
+        
 
     }
     

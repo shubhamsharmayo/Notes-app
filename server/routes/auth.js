@@ -28,12 +28,7 @@ router.post('/', async(req, res) => {
       }else{
         // console.log("Welcome")
         // console.log(user.username)
-        const token = jwt.sign(
-          { userId: user._id, username: user.username }, // Payload
-          Secret, // Secret key
-          { expiresIn: '1h' } // Token expiration time
-      );
-        return res.json({token,username:user.username})
+        return res.json(user.username)
     }
     } catch (error) {
       res.status(400).json(error)
@@ -41,7 +36,6 @@ router.post('/', async(req, res) => {
     
     
   })
-
 router.post('/signup', async(req,res)=>{
   try {
    
