@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import login from '../../assets/login.mp4'
 import './signup.css'
+import Loading from '../loading/Loading'
 
 const Signup = () => {
 
@@ -45,7 +46,7 @@ const Signup = () => {
         <label >Username </label><input type="text" {...register("username",{required:true})}/> <br />
         {warning?<span className='warning'>{warning}</span>:null}
         <label >Password </label><input type="password" {...register("password",{required:true})}/> <br />
-        <button type='submit' >Register</button>
+        {isSubmitting?<button type='submit' disabled={isSubmitting}><Loading/></button>:<button type='submit' >Register</button>}
       </form>
       <NavLink className='loginlink' to={'/'}>Already Have Acoount ?</NavLink>
       </div>
