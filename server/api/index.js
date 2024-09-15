@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors())
 
 
-mongoose.connect(process.env.DATABASE_CO)
+mongoose.connect(process.env.DATABASE_CON)
 
 app.use('/',Auth)
 app.use('/profile',Profile)
