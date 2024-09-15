@@ -109,3 +109,12 @@
     min-width: 2500px;
     
 }
+.titles{
+  position: absolute;
+  z-index: 99;
+  top: 50px;
+  font-size: 30px;
+  font-weight: 1000;
+  color: chartreuse;
+  filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+}

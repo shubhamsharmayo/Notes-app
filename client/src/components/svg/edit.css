@@ -57,3 +57,10 @@ textarea.edit-control:focus,.edit-control-title:focus{
     display: flex;
     gap: 10px;
 }
+@media  screen and (max-width: 715px) {
+    .taskform2{
+        position: relative;
+    right: 130px;
+    width: 160%;
+    }
+  }

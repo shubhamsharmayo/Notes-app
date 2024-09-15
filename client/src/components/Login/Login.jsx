@@ -45,6 +45,9 @@ const Login = () => {
       <video className='loginbackground' autoPlay loop muted>
         <source src={login}/>
       </video>
+      <div className='titles'>
+        Note Keeper
+      </div>
       <div>
        <form className='loginform' onSubmit={handleSubmit(onSubmit)}>
        {verify?<div className='invalid'>Invalid Credentials </div>:<div></div> }
