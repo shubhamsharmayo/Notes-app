@@ -7,13 +7,13 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const app = express()
-const port = process.env.PORT
+const port = 3045
 app.use(express.json())
 
 app.use(cors())
 
 
-mongoose.connect(process.env.DATABASE_CON)
+mongoose.connect("mongodb://localhost:27017/page")
 
 app.use('/',Auth)
 app.use('/profile',Profile)

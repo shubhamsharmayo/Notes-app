@@ -15,13 +15,15 @@ router.use(bodyParser.json())
 
 // Route to handle profile data submission
 router.post('/profile/:username', async(req, res) => {
+    let date = new Date()
     const { username } = req.params;
     const { title, description } = req.body;
     const task = new Tasks({
         user:req.body.user,
         title:req.body.title,
         description:req.body.description,
-        color:req.body.color
+        color:req.body.color,
+        date: date.toDateString()
     })
     await task.save()
     res.json(task._id)

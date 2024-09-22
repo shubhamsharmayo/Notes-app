@@ -53,7 +53,7 @@
     /* border: 1px solid white; */
     align-items: center;
     margin-top: 50px;
-    justify-content: end;
+    justify-content: space-between;
     width: 100%;
     gap: 10px;
     
@@ -93,6 +93,14 @@
     outline: none;
     border: none;
     height: 25px;
+}
+
+.date>p{
+    font-size: 10px;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
 }
 @media  screen and (max-width: 1358px) {
     .list{

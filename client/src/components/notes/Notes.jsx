@@ -18,7 +18,10 @@ const Notes = ({ datainuse, setdatainuse }) => {
               <h3 className='title' >{data.title}</h3> 
               <p className='desc'>{data.description}</p>
               <div className='cardbtn '>
-                
+                <div className='date'>
+                  <p>{data.date}</p>
+                </div>
+                <div className='buttons'>
                 <div className='editbtn'>
                   <Edit datainuse={data} setdatainuse={setdatainuse}/>
                   <span className='editlabel'>Edit</span>
@@ -26,6 +29,7 @@ const Notes = ({ datainuse, setdatainuse }) => {
                 <div className="deletebtn">
                   <Delete datainuse={data._id} setdatainuse={setdatainuse} />
                   <span className='deletelabel'>Delete</span>
+                </div>
                 </div>
               </div>
             </li>
