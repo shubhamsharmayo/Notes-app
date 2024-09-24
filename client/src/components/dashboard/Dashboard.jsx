@@ -59,7 +59,7 @@ const Dashboard = () => {
       async function fetch(){
         setloader(true)
         try {
-          let submit = await axios.get(`https://notes-app-inky-zeta.vercel.app/${nameofuser.replaceAll('"','')}`, {
+          let submit = await axios.get(`https://notes-app-inky-zeta.vercel.app/profile/${nameofuser.replaceAll('"','')}`, {
             headers: {
               'Authorization': `Bearer ${token}`,
             },
