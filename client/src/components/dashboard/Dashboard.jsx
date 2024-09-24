@@ -37,7 +37,7 @@ const Dashboard = () => {
       
       const requestData = { ...data, user: nameofuser.replaceAll('"','') };
       
-      let submit = await fetch(`http://localhost:3045/profile/profile/${nameofuser}`,{
+      let submit = await fetch(`https://notes-app-inky-zeta.vercel.app/profile/profile/${nameofuser}`,{
         method: "POST",
         headers: {
           
@@ -59,7 +59,7 @@ const Dashboard = () => {
       async function fetch(){
         setloader(true)
         try {
-          let submit = await axios.get(`http://localhost:3045/profile/${nameofuser.replaceAll('"','')}`, {
+          let submit = await axios.get(`https://notes-app-inky-zeta.vercel.app/${nameofuser.replaceAll('"','')}`, {
             headers: {
               'Authorization': `Bearer ${token}`,
             },
