@@ -33,7 +33,7 @@ const Login = () => {
         }
 
 
-        if(res.username!=='"not found"'){
+        if(res.username!=="not found"){
           setNameofuser(res.username);
           setverify(false)
           navigate('/dashboard')
