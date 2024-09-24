@@ -4,6 +4,7 @@ import cors from 'cors'
 import { Signup } from '../models/Signup.js'
 import jwt from 'jsonwebtoken'
 const router = express.Router()
+import dotenv from 'dotenv'
 
 dotenv.config()
 
