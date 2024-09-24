@@ -2,10 +2,12 @@ import express, { Router } from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import { Signup } from '../models/Signup.js'
-const router = express.Router()
 import jwt from 'jsonwebtoken'
+const router = express.Router()
 
-const Secret = 'd3d8b5ffb1f83db43b61969af4a037da0889bbcc409501e4fd93b51ff79aa09dc6530759cb7290578b722a57dd8180b7d257f33f671463ea2ee24dd3913bc6d2'
+dotenv.config()
+
+
 
 router.use(cors())
 router.use(bodyParser.urlencoded({ extended: true }))
@@ -24,12 +26,23 @@ router.post('/', async(req, res) => {
     try {
       const user = await Signup.findOne({email})
       if (!user || user.password !== password){
-        return res.json("not found")
-      }else{
-        // console.log("Welcome")
-        // console.log(user.username)
-        return res.json(user.username)
-    }
+        return res.json({username:"not found"})
+      }
+      const payload = { id: user._id, email: user.email, username: user.username };
+     jwt.sign(payload,process.env.KEY,{expiresIn:'1h'},(err,token)=>{
+      if (err) {
+        return res.status(500).json({ message: "Error generating token" });
+      }
+        // console.log(token)
+        res.json({
+          message: "Login successful",
+          username: user.username,
+          token: token  // The token sent to browser
+        });
+      })
+       
+        
+    
     } catch (error) {
       res.status(400).json(error)
     }
