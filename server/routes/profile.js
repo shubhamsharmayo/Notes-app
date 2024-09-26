@@ -23,6 +23,7 @@ router.post('/profile/:username', async(req, res) => {
         timeZone: 'Asia/Kolkata'  // Set to Indian time zone
       };
       const date = new Date().toLocaleString('en-IN', options);
+     const dateInIndia = date.replace(/,/g, '');
     const { username } = req.params;
     const { title, description } = req.body;
     const task = new Tasks({
@@ -30,7 +31,7 @@ router.post('/profile/:username', async(req, res) => {
         title:req.body.title,
         description:req.body.description,
         color:req.body.color,
-        date: date
+        date: dateInIndia
     })
     await task.save()
     res.json(task._id)
