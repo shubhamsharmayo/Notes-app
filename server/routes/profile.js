@@ -15,7 +15,14 @@ router.use(bodyParser.json())
 
 // Route to handle profile data submission
 router.post('/profile/:username', async(req, res) => {
-    let date = new Date()
+    const options = {
+        weekday: 'short',  // Short day name (e.g., Thu)
+        year: 'numeric',   // Year (e.g., 2024)
+        month: 'short',    // Short month name (e.g., Sep)
+        day: 'numeric',    // Day of the month (e.g., 26)
+        timeZone: 'Asia/Kolkata'  // Set to Indian time zone
+      };
+      const date = new Date().toLocaleString('en-IN', options);
     const { username } = req.params;
     const { title, description } = req.body;
     const task = new Tasks({
@@ -23,7 +30,7 @@ router.post('/profile/:username', async(req, res) => {
         title:req.body.title,
         description:req.body.description,
         color:req.body.color,
-        date: date.toDateString()
+        date: date
     })
     await task.save()
     res.json(task._id)
