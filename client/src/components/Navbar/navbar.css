@@ -1,11 +1,12 @@
 .navbar{
-    box-shadow: 1px 0px 5px white;
+    box-shadow: 1px 0px 5px rgb(95, 95, 95);
     padding: 15px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    /* background-color: rgb(54, 54, 54); */
+    /* backdrop-filter: blur(10px); */
     /* color: black; */
 }
 .navbar>h1{

@@ -1,3 +1,10 @@
+.dashboard{
+  background: url(https://img.freepik.com/premium-photo/simple-business-background-your-design-project-with-light-colors-3d-shapes-lines_1021888-2069.jpg?w=826);
+  background-size: cover;
+  background-attachment: fixed;
+  /* background-position: 100% 100%; */
+}
+
 .taskform{
     background-color: black;
     display: flex;
@@ -25,6 +32,7 @@
 .dot{
     display: flex;
     flex-wrap: wrap;
+    /* backdrop-filter: blur(1px); */
 }
 .notebtncont{
     display: flex;
@@ -131,6 +139,9 @@
   }
 
   @media  screen and (max-width: 715px) {
+    .dashboard{
+    
+    }
     .formcontainer{
       width: 100%;
     }

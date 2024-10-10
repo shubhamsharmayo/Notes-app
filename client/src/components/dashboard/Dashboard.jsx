@@ -84,7 +84,7 @@ const Dashboard = () => {
     
 // console.log(datainuse)
   return (
-    <div>
+    <div className='dashboard'>
       <Navbar/>
       <div className='notebtncont'>
       <button className='notesbtn' onClick={forms}>Add Note</button>
