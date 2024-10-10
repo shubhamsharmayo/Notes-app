@@ -3,6 +3,8 @@
   background-size: cover;
   background-attachment: fixed;
   /* background-position: 100% 100%; */
+  height: fit-content;
+  min-height: 100vh;
 }
 
 .taskform{
