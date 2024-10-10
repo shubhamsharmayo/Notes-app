@@ -140,7 +140,7 @@
 
   @media  screen and (max-width: 715px) {
     .dashboard{
-    
+    background-repeat: repeat-y;
     }
     .formcontainer{
       width: 100%;
