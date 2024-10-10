@@ -108,9 +108,11 @@ const Dashboard = () => {
         </div>:null}
         
         {loader ? (
-        <p></p>
+          <div className='contentloader'><Loading/></div>
+        
       ) : datainuse ? (
         <div className="dot">
+          
           <Notes datainuse={datainuse} setdatainuse={setdatainuse}/>
         </div>
       ) : null}
