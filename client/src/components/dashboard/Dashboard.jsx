@@ -15,7 +15,7 @@ const Dashboard = () => {
     const [datainuse, setdatainuse] = useState("")
     const [click, setclick] = useState(false)
     const [loader, setloader] = useState(true)
-    const [fetchedata, setfetchedata] = useState("")
+   
     
     function forms(){
       setclick(!click)
@@ -51,6 +51,7 @@ const Dashboard = () => {
       setdatainuse((prevData) => [...prevData, res])
       // console.log(res)
       // setfetchedata(res)
+      setclick(false)
     }
     
     useEffect(() => {

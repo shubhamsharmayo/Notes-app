@@ -12,9 +12,15 @@ const Delete = ({datainuse,setdatainuse}) => {
           const data =  await axios.delete(`https://notes-app-inky-zeta.vercel.app/profile/delete/${id}`);
             console.log(data.data)
             if(data.data=='Task deleted'){
-              setdatainuse((prevData) => prevData.filter((item) => item._id !== id));
-
+              setdatainuse((prevData) =>
+                prevData.map((item) =>
+                  item._id === id ? { ...item, isDeleting: true } : item
+                )
+              );
             }
+            setTimeout(() => {
+              setdatainuse((prevData) => prevData.filter((item) => item._id !== id));
+            }, 500);
         } catch (error) {
             console.error('Error deleting Task:', error);
         }

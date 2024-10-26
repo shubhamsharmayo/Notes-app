@@ -23,14 +23,15 @@
     list-style: none;
     /* justify-content: center; */
     display: inline-block;
-  
+    
 }
 .listcard{
     margin: 10px;
     /* border: 1px solid white; */
-    box-shadow: -2px 3px 4px rgb(0, 0, 0);
+    box-shadow: -2px 3px 4px rgb(0, 0, 0),0px 0px 3.5px  rgb(255, 255, 255) inset;
     width: 300px;
     display: flex;
+    flex-wrap: wrap;
     float:right;
     flex-direction: column;
     align-items: center;
@@ -39,7 +40,7 @@
    border-radius: 10px;
     /* min-height: 200px; */
     padding: 20px;
-    
+    /* transition: float 30s ease; */
 }
 
 .desc{
@@ -132,3 +133,13 @@
         width: 100%;
     }
   }
+  .listcard {
+    transition:  opacity 0.5s ease, transform 0.5s ease ;
+  }
+  
+  .listcard.deleting {
+    opacity: 0;
+    
+    transform: scale(0);
+  }
+  

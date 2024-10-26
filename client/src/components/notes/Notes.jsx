@@ -14,7 +14,7 @@ const Notes = ({ datainuse, setdatainuse }) => {
       <div className='card'>
         <ul className='list' >
           {datainuse.map((data, index) => (
-            <li className='listcard' style={{background:data.color}} key={index}>
+            <li className={`listcard ${data.isDeleting ? 'deleting' : ''}`} style={{background:data.color}} key={index}>
               <h3 className='title' >{data.title}</h3> 
               <p className='desc'>{data.description}</p>
               <div className='cardbtn '>
