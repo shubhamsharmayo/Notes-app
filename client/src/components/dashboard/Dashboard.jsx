@@ -47,7 +47,7 @@ const Dashboard = () => {
       })
     
       
-      let res = await submit.text()
+      let res = await submit.json()
       setdatainuse((prevData) => [...prevData, res])
       // console.log(res)
       // setfetchedata(res)
@@ -67,7 +67,7 @@ const Dashboard = () => {
         
          
          setdatainuse(submit.data)
-         console.log(submit.data)
+        //  console.log(submit.data)
          setloader(false)
         } catch (error) {
           console.error(error.response?.data || error.message);
