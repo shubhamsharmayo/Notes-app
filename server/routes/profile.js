@@ -34,7 +34,7 @@ router.post('/profile/:username', async(req, res) => {
         date: dateInIndia
     })
     await task.save()
-    res.json(task._id)
+    res.json(task)
 //    console.log(req.params.username)
 //    console.log(req.body)
 //    res.json(username)

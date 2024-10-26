@@ -48,9 +48,9 @@ const Dashboard = () => {
     
       
       let res = await submit.text()
-    
+      setdatainuse((prevData) => [...prevData, res])
       // console.log(res)
-      setfetchedata(res)
+      // setfetchedata(res)
     }
     
     useEffect(() => {
@@ -67,6 +67,7 @@ const Dashboard = () => {
         
          
          setdatainuse(submit.data)
+         console.log(submit.data)
          setloader(false)
         } catch (error) {
           console.error(error.response?.data || error.message);
@@ -75,8 +76,8 @@ const Dashboard = () => {
        
          }
          fetch()
-        
-     }, [nameofuser,fetchedata])
+        //  console.log(fetchedata)
+     }, [nameofuser])
 
 
 
