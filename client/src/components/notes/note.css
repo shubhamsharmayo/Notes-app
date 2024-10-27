@@ -60,10 +60,12 @@
     gap: 10px;
     
     opacity: 0;
-    transition: opacity 700ms ease;
+    transform: translateY(21px);
+    transition: opacity 700ms ease,transform 700ms ease;
 }
 .listcard:hover .cardbtn{
     opacity: 1;
+    transform: translateY(0px);
 }
 .editlabel, .deletelabel{
     display: none;

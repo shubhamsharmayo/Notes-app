@@ -4,7 +4,7 @@ import React, { createContext, useState, useEffect } from 'react';
 export const name = createContext();
 
 const NameProvider = ({ children }) => {
-    // Initialize the state with a function that retrieves the value from localStorage, if it exists
+//function that retrieves the value from localStorage, if it exists
     const [nameofuser, setNameofuser] = useState(() => {
         return localStorage.getItem('nameofuser') || ''; // If there's no item in localStorage, default to an empty string
     });

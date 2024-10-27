@@ -5,12 +5,11 @@ import './dashboard.css'
 import Navbar from '../Navbar/Navbar'
 import Notes from '../notes/Notes'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
 import Loading from '../loading/Loading'
 
 
 const Dashboard = () => {
-  const navigate = useNavigate()
+  
     const { nameofuser } = useContext(name);
     const [datainuse, setdatainuse] = useState("")
     const [click, setclick] = useState(false)
