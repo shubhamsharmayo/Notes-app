@@ -19,12 +19,13 @@ const Edit = ({ datainuse, setdatainuse }) => {
   };
 
   const handleUpdate = async (formData) => {
-    console.log(formData)
+    // console.log(formData)
     try {
       const response = await axios.put(
         `https://notes-app-inky-zeta.vercel.app/profile/update/${isEditing}`,
         formData
       );
+      // console.log(response)
       if (response.status === 200) {
         const updatedNote = response.data;
         setdatainuse((prevData) =>

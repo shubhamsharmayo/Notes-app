@@ -2,3 +2,27 @@
 body{
     font-family: "Roboto", arial, sans-serif;
 }
+::-webkit-scrollbar {
+    width: 9px;
+    background: transparent;
+    
+  }
+  
+  
+   ::-webkit-scrollbar-track {
+    /* background: transparent;  */
+    display: none;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 44); */
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(23, 109, 1, 0.795); 
+    border-radius: 100px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #09c702; 
+  }
+  
