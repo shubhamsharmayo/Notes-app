@@ -10,6 +10,7 @@ const Navbar = () => {
   function logout(){
     localStorage.removeItem('token')
     localStorage.removeItem('nameofuser')
+    setNameofuser('');
     navigate('/')
   }
 
