@@ -6,12 +6,12 @@ import noteimg from '../../assets/noteimg.png'
 
 const Navbar = () => {
   const navigate = useNavigate()
+  const { nameofuser,setNameofuser } = useContext(name);
   function logout(){
-    navigate('/')
-    localStorage.removeItem('nameofuser')
     localStorage.removeItem('token')
+    localStorage.removeItem('nameofuser')
+    navigate('/')
   }
-    const { nameofuser,setNameofuser } = useContext(name);
 
   return (
     <div className='navbar'>
