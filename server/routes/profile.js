@@ -1,6 +1,5 @@
 import express, { Router } from 'express'
 import bodyParser from 'body-parser'
-import mongoose from 'mongoose'
 import cors from 'cors'
 import { Tasks } from '../models/tasks.js'
 import verifyToken from '../middleware/verifyToken.js'

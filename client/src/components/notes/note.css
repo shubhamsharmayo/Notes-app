@@ -24,6 +24,8 @@
     /* justify-content: center; */
     display: inline-block;
     
+    /* border: 2px solid black; */
+    
 }
 .listcard{
     margin: 10px;
@@ -31,8 +33,8 @@
     box-shadow: -2px 3px 4px rgb(0, 0, 0),0px 0px 3.5px  rgb(255, 255, 255) inset;
     width: 300px;
     display: flex;
-    flex-wrap: wrap;
-    float:right;
+    /* flex-wrap:wrap; */
+    float:left;
     flex-direction: column;
     align-items: center;
     height: fit-content;
