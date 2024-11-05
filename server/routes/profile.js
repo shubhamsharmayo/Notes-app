@@ -78,7 +78,7 @@ router.delete('/delete/:id',verifyToken, async (req, res) => {
     }
 });
 
-router.put('/star/:id',async(req,res)=>{
+router.put('/star/:id',verifyToken,async(req,res)=>{
     const {id} = req.params
     // console.log(id)
     const starred = req.body.starred;
@@ -94,7 +94,7 @@ router.put('/star/:id',async(req,res)=>{
     }
 })
 
-router.put('/unstar/:id',async(req,res)=>{
+router.put('/unstar/:id',verifyToken,async(req,res)=>{
     const {id} = req.params
     // console.log(req.body.starred)
     const starred = req.body.starred;
