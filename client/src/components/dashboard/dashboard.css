@@ -6,6 +6,8 @@
   height: fit-content;
   min-height: 100vh;
   
+  
+  
 }
 
 .taskform{
@@ -36,6 +38,7 @@
     display: flex;
     flex-wrap: wrap;
     /* backdrop-filter: blur(1px); */
+    /* position: absolute; */
     
 }
 .notebtncont{
@@ -77,6 +80,7 @@
 
     backdrop-filter: blur(15px);
 }
+
 .formbtn{
     display: flex;
     justify-content: center;

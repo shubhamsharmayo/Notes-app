@@ -1,0 +1,39 @@
+.stars{
+    width: 30px;
+    cursor: pointer;
+    transform: scale(0.7);
+    transition: transform 1s ease;
+    z-index: 1;
+}
+.stars:hover{
+filter:drop-shadow(0px 0px 2px white)
+}
+.starsfilled{
+    width: 30px;
+    cursor: pointer;
+    transform: scale(1);
+    /* transition: transform 1s ease; */
+    
+}
+
+ .starlabel{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    
+    background: rgb(56, 56, 56);
+    width: fit-content;
+    height: fit-content;
+    padding: 1px 7px 1px 7px;
+    border-radius: 4px;
+    transition: display 700ms ease 100ms;
+    font-size: 14px;
+    margin-top: 5px;
+    color: rgb(226, 226, 226);
+}
+.starbox:hover .starlabel{
+    display: block;
+    font-size: 14px;
+    transition: display 700ms ease 100ms;
+}
+

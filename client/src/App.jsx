@@ -7,6 +7,7 @@ import Login from './components/Login/Login'
 import Signup from './components/Signup/Signup'
 import Dashboard from './components/dashboard/Dashboard'
 import NameProvider ,{name} from './Context/Context';
+import Starred from './components/starred/Starred'
 
 function App() {
   
@@ -23,7 +24,12 @@ function App() {
     {
       path:'/dashboard',
       element:<><Dashboard/></>
+    },
+    {
+      path:'/starred',
+      element:<><Starred/></>
     }
+    
   ])
   
 

@@ -5,7 +5,8 @@ const TaskSchema = new mongoose.Schema({
     title: { type: String , unique:false},
     description: { type: String, unique:false},
     color:{type:String, unique:false},
-    date: {type:String, unique:false}
+    date: {type:String, unique:false},
+    starred:{type:Boolean , default: false}
     
 });
 

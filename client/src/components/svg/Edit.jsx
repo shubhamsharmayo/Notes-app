@@ -44,7 +44,7 @@ const Edit = ({ datainuse, setdatainuse }) => {
   };
 
   return (
-    <div>
+    <div className="edit">
       <div onClick={() => handleEdit(datainuse)}>
         <svg
           width="64px"

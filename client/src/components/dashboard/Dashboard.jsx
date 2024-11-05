@@ -48,14 +48,14 @@ const Dashboard = () => {
       
       let res = await submit.json()
       setdatainuse((prevData) => [...prevData, res])
-      // console.log(res)
-      // setfetchedata(res)
+      console.log(res)
+      
       setclick(false)
     }
     
     useEffect(() => {
       const token = localStorage.getItem('token');
-      // console.log(token);
+      // console.log(nameofuser);
       async function fetch(){
         setloader(true)
         try {
@@ -76,8 +76,8 @@ const Dashboard = () => {
        
          }
          fetch()
-        //  console.log(fetchedata)
-     }, [nameofuser])
+        }, [nameofuser])
+        console.log(datainuse)
 
 
 

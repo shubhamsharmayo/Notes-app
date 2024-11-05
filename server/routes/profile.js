@@ -30,9 +30,11 @@ router.post('/profile/:username', async(req, res) => {
         title:req.body.title,
         description:req.body.description,
         color:req.body.color,
-        date: dateInIndia
+        date: dateInIndia,
+        starred: req.body.starred || false
     })
     await task.save()
+    // console.log(task)
     res.json(task)
 //    console.log(req.params.username)
 //    console.log(req.body)
@@ -75,5 +77,50 @@ router.delete('/delete/:id', async (req, res) => {
         res.status(500).json({ msg: 'Server error' });
     }
 });
+
+router.put('/star/:id',async(req,res)=>{
+    const {id} = req.params
+    // console.log(id)
+    const starred = req.body.starred;
+    try {
+        const Updates = await Tasks.findByIdAndUpdate(id, {starred}, { new: true });
+        if (!Updates) {
+            return res.status(404).json({ msg: 'Note not found' });
+        }
+        
+        res.json(Updates);
+    } catch (err) {
+        res.status(500).json({ msg: 'Server error' });
+    }
+})
+
+router.put('/unstar/:id',async(req,res)=>{
+    const {id} = req.params
+    // console.log(req.body.starred)
+    const starred = req.body.starred;
+    try {
+        const unstarred = await Tasks.findByIdAndUpdate(id, {starred}, { new: true });
+        if (!unstarred) {
+            return res.status(404).json({ msg: 'Note not found' });
+        }
+        
+        res.json(unstarred);
+    } catch (err) {
+        res.status(500).json({ msg: 'Server error' });
+    }
+})
+
+router.get('/starred/:user',async(req,res)=>{
+    const user = req.params
+    // console.log(user.user)
+    const starmarked = await Tasks.find({
+        $and: [
+          { user: user.user },
+          { starred: true }
+        ]
+    });
+    // console.log(starmarked)
+    res.json(starmarked)
+})
 
 export default router
