@@ -49,7 +49,7 @@ router.get('/:user',verifyToken, async(req,res)=>{
     res.json(found)
 })
 
-router.delete('/delete/:id', async (req, res) => {
+router.delete('/delete/:id',verifyToken, async (req, res) => {
     console.log(req.params.id)
     try {
         const taskid = await Tasks.findByIdAndDelete(req.params.id);

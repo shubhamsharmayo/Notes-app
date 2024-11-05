@@ -8,9 +8,14 @@ const Delete = ({datainuse,setdatainuse}) => {
 
  
     const handleDelete = async (id) => {
+      const token = localStorage.getItem('token')
         try {
           console.log(id)
-          const data =  await axios.delete(`https://notes-app-inky-zeta.vercel.app/profile/delete/${id}`);
+          const data =  await axios.delete(`https://notes-app-inky-zeta.vercel.app/profile/delete/${id}`, {
+            headers: {
+              'Authorization': `Bearer ${token}`,
+            },
+          });
             console.log(data)
             if(data.data=='Task deleted'){
               setdatainuse((prevData) =>
