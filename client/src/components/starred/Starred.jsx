@@ -13,7 +13,7 @@ const Starred = () => {
 
   useEffect(() => {
     // console.log(nameofuser)
-    // const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token');
  async function starrednotes() {
     setloader(true)
     try{
