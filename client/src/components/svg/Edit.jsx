@@ -20,10 +20,15 @@ const Edit = ({ datainuse, setdatainuse }) => {
 
   const handleUpdate = async (formData) => {
     // console.log(formData)
+    const token = localStorage.getItem('token')
     try {
       const response = await axios.put(
         `https://notes-app-inky-zeta.vercel.app/profile/update/${isEditing}`,
-        formData
+        formData, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        }
       );
       // console.log(response)
       if (response.status === 200) {

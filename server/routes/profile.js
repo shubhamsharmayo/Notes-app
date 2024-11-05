@@ -63,7 +63,7 @@ router.delete('/delete/:id',verifyToken, async (req, res) => {
     }
   });
 
-  router.put('/update/:id', async (req, res) => {
+  router.put('/update/:id',verifyToken, async (req, res) => {
     const { id } = req.params;
     const {title,description,color} = req.body;
 
