@@ -19,7 +19,7 @@ const Notes = ({ starredData, setstarredData }) => {
             <li className={`listcard ${data.isDeleting ? 'deleting' : ''}`} style={{ background: data.color }} key={index}>
               <h3 className='title' >{data.title}</h3>
               <div className='starmark'>{data.starred ? <StarFilled datainuse={data} setdatainuse={setstarredData} /> : <Star datainuse={data} setdatainuse={setstarredData} />}</div>
-              <p className='desc'>{data.description}</p>
+              <div className='descdiv'><p className='desc'>{data.description}</p></div>
               <div className='cardbtn '>
                 <div className='date'>
                   <p>{data.date}</p>
