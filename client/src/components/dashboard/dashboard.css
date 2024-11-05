@@ -22,6 +22,7 @@
     position: fixed;
     z-index: 1;
     height: fit-content;
+   
     
 }
 .formcontainer>form{
@@ -39,12 +40,13 @@
     flex-wrap: wrap;
     /* backdrop-filter: blur(1px); */
     /* position: absolute; */
-    
+    /* transform: translateY(40px); */
 }
 .notebtncont{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 .notesbtn{
     margin: 30px;

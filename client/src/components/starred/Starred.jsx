@@ -17,7 +17,11 @@ const Starred = () => {
  async function starrednotes() {
     setloader(true)
     try{
-    const submited = await axios.get(`https://notes-app-inky-zeta.vercel.app/profile/starred/${nameofuser.replaceAll('"','')}`)
+    const submited = await axios.get(`https://notes-app-inky-zeta.vercel.app/profile/starred/${nameofuser.replaceAll('"','')}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    })
     // console.log(submited.data)
     setstarredData(submited.data)
     setloader(false)

@@ -110,7 +110,7 @@ router.put('/unstar/:id',async(req,res)=>{
     }
 })
 
-router.get('/starred/:user',async(req,res)=>{
+router.get('/starred/:user',verifyToken,async(req,res)=>{
     const user = req.params
     // console.log(user.user)
     const starmarked = await Tasks.find({
