@@ -89,13 +89,31 @@ display: block;
     /* justify-content: center; */
     align-items: center;
     gap: 10px;
-    margin: 40px 20px;
+    margin: 30px 0px 0 0;
     opacity: 1;
     transition: opacity 1s ease,display 1s ease;
 }
 .navlink{
     text-decoration: none;
     color: white;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+}
+.navopen{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(18, 155, 0);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
 }
 
 .navimg1,.navimg2{

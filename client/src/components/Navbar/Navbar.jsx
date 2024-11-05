@@ -31,8 +31,8 @@ const Navbar = () => {
     <div className='navbar'>
       <div className={`sidebar ${sidebar ? 'sidebar-open': ''}`}>
       <img onClick={close} className={`sidebar-logo ${sidebar ? 'sidebar-logo1':''}`} src={noteimg} alt="" />
-      <div className={`link ${sidebar ? 'linkdisplay':''}`}> <img className='navimg1' src={notenav} alt="" /><NavLink className="navlink" to={'/dashboard'}>Dashboard</NavLink></div>
-      <div className={`link ${sidebar ? 'linkdisplay':''}`}> <img className='navimg2' src={starnav} alt="" /><NavLink className="navlink" to={'/starred'}>Starred</NavLink></div>
+      <div className={`link ${sidebar ? 'linkdisplay':''}`}> <NavLink className={(e)=>{return e.isActive?"navopen":"navlink"}} to={'/dashboard'}> <img className='navimg1' src={notenav} alt="" />Dashboard</NavLink></div>
+      <div className={`link ${sidebar ? 'linkdisplay':''}`}> <NavLink className={(e)=>{return e.isActive?"navopen":"navlink"}} to={'/starred'}><img className='navimg2' src={starnav} alt="" />Starred</NavLink></div>
       
       
       
