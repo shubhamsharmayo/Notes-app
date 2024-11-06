@@ -67,11 +67,11 @@
     justify-content: space-between;
     width: 100%;
     gap: 10px;
-    /* position: relative; */
+    position: relative;
     opacity: 0;
     transform: translateY(21px);
     transition: opacity 700ms ease,transform 700ms ease;
-    overflow: hidden;
+    
     margin-top: 21px;
 }
 .listcard:hover .cardbtn{
@@ -89,7 +89,7 @@
     height: fit-content;
     padding: 1px 7px 1px 7px;
     border-radius: 4px;
-    transition: opacity 700ms ease 100ms;
+    transition: display 700ms ease 100ms;
     font-size: 14px;
     margin-top: 5px;
     color: rgb(226, 226, 226);
@@ -98,11 +98,14 @@
 .editbtn:hover .editlabel{
     display: block;
     font-size: 14px;
+    transition: display 700ms ease 100ms;
     
 }
 .deletebtn:hover .deletelabel{
     display: block;
     font-size: 14px;
+    transition: display 700ms ease 100ms;
+    
 }
 
 .color{
