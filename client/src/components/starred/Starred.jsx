@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
 import Loading from '../loading/Loading';
 import Starnotes from '../StarNotes/Starnotes';
+import './starred.css'
 
 const Starred = () => {
   const { nameofuser } = useContext(name);
@@ -41,7 +42,7 @@ const Starred = () => {
   return (
     <div className='dashboard'>
       <Navbar/>
-
+      <div className='star-main'>
       {loader ? (
           <div className='contentloader'><Loading/></div>
         
@@ -51,6 +52,7 @@ const Starred = () => {
           <Starnotes starredData={starredData} setstarredData={setstarredData}/>
         </div>
       ) : null}
+      </div>
     </div>
   )
 }

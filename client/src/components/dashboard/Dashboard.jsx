@@ -87,6 +87,7 @@ const Dashboard = () => {
   return (
     <div className='dashboard'>
       <Navbar/>
+      <div className='dashboard-main'>
       <div className='notebtncont'>
       <button className='notesbtn' onClick={forms}>Add Note</button>
       </div>
@@ -117,6 +118,7 @@ const Dashboard = () => {
           <Notes datainuse={datainuse} setdatainuse={setdatainuse}/>
         </div>
       ) : null}
+      </div>
       </div>
         
       

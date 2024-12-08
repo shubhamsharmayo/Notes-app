@@ -9,6 +9,9 @@
   
   
 }
+.dashboard-main{
+  padding-top: 45px;
+}
 
 .taskform{
     background-color: black;
@@ -23,7 +26,6 @@
     z-index: 1;
     height: fit-content;
    
-    
 }
 .formcontainer>form{
     display: flex;
@@ -79,7 +81,8 @@
     top: 2%;
     border-radius: 11px;
     -webkit-backdrop-filter: blur(15px);
-
+    transform: scale(1);
+    transition: transform 2s ease;
     backdrop-filter: blur(15px);
 }
 
