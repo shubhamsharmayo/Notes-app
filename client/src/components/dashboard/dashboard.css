@@ -1,167 +1,209 @@
-.dashboard{
-  background: url(https://img.freepik.com/premium-photo/simple-business-background-your-design-project-with-light-colors-3d-shapes-lines_1021888-2069.jpg?w=826);
+.dashboard {
+  background: url(https://wallpapercat.com/w/full/b/a/9/1209998-3840x2160-desktop-4k-glow-in-the-dark-background-photo.jpg);
   background-size: cover;
   background-attachment: fixed;
   /* background-position: 100% 100%; */
   height: fit-content;
   min-height: 100vh;
-  
-  
-  
-}
-.dashboard-main{
-  padding-top: 45px;
+
+
 }
 
-.taskform{
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    /* flex-direction: column; */
-    width: 97vw;
-    height: 1000px;
-    
-    position: fixed;
-    z-index: 1;
-    height: fit-content;
-   
-}
-.formcontainer>form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-}
-.dot{
-    display: flex;
-    flex-wrap: wrap;
-    /* backdrop-filter: blur(1px); */
-    /* position: absolute; */
-    /* transform: translateY(40px); */
-}
-.notebtncont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-.notesbtn{
-    margin: 30px;
-    cursor: pointer;
-    width: 95px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: green;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-}
-.notesbtn:hover, .formbtn button:hover {
-    background-color: rgb(2, 179, 2);
-}
-.formcontainer{
-    box-shadow: 0px 0px 4px rgb(0, 0, 0);
-    /* background: url(../../assets/pngtree-faceted-abstract-background-in-3d-with-shimmering-iridescent-metallic-texture-of-picture-image_3653595.jpg); */
-    color: #ffffff;
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    width: 40%;
-    height: 430px;
-    position: absolute;
-    z-index: 1;
-    top: 2%;
-    border-radius: 11px;
-    -webkit-backdrop-filter: blur(15px);
-    transform: scale(1);
-    transition: transform 2s ease;
-    backdrop-filter: blur(15px);
+.dashboard-main {
+  padding-top: 75px;
+
 }
 
-.formbtn{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    /* border: 1px solid white; */
-    position: relative;
-    left: 26%;
-    top: -15px;
+.taskform {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* flex-direction: column; */
+  width: 97vw;
+  height: 1000px;
+
+  position: fixed;
+  z-index: 1;
+  height: fit-content;
+  opacity: 0;
+  transform: scale(0);
+  visibility: hidden;
+
+
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
 }
 
-.formbtn button{
-    cursor: pointer;
-    width: 55px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: green;
-    border: none;
+.taskform.show {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
+}
+
+.formcontainer>form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+
+}
+
+.dot {
+  display: flex;
+  flex-wrap: wrap;
+  /* backdrop-filter: blur(1px); */
+  /* position: absolute; */
+  /* transform: translateY(40px); */
+}
+
+.notebtncont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.notesbtn {
+  margin: 30px;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  /* border-radius: 5px; */
+  background-color: rgb(199, 7, 7);
+  border: none;
+  font-size: 40px;
+  font-weight: 600;
+  box-shadow: -2px 3px 2px rgb(150, 67, 67);
+  position: fixed;
+  bottom: 0%;
+  right: -1.5%;
+  color: rgb(235, 235, 235);
+  z-index: 1000;
+}
+
+.notesbtn:hover,
+.formbtn button:hover {
+  background-color: rgb(2, 179, 2);
+}
+
+.formcontainer {
+  box-shadow: 0px 0px 5px rgb(47, 0, 218);
+  background: url(https://www.shutterstock.com/image-illustration/abstract-dark-3d-rendered-geometric-600nw-217413286.jpg);
+  mix-blend-mode: exclusion;
+  color: #ffffff;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+  height: 430px;
+  position: absolute;
+  z-index: 1;
+  top: 2%;
+  border-radius: 11px;
+  -webkit-backdrop-filter: blur(15px);
+  transform: scale(1);
+  transition: transform 2s ease;
+  backdrop-filter: blur(15px);
+}
+
+.formbtn {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  /* border: 1px solid white; */
+  position: relative;
+  left: 26%;
+  top: -15px;
+}
+
+.formbtn button {
+  cursor: pointer;
+  width: 55px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: green;
+  border: none;
 }
 
 .form-control {
-    width: 80%;
-    padding: 12px 16px;
-    font-size: 16px;
-    color: #ffffff;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    background-color: #000000;
-    box-shadow: inset 0px 0px 2px rgb(255, 255, 255);
-    transition: border 0.3s, box-shadow 0.3s;
-    outline: none;
-    height: auto;
-  }
-  
-  .form-control:focus {
-    border-color: #007bff;
-    box-shadow: inset 0 0 8px rgb(0, 102, 255);
-    outline: none;
-  }
-  
-  .form-control::placeholder {
-    color: #aaa;
-  }
-  
-  textarea.form-control {
-    resize:none;
-    overflow-y: auto;
-    min-height: 220px;
-    white-space: pre-wrap;
-  }
-  
-  .form-control:hover {
-    border-color: #007bff;
-  }
-  .colors{
-    display: flex;
-    
-    align-items: center;
-    gap: 15px;
-  
-    
-  }
-  .colorbtn{
-    width: 50px;
-  }
+  width: 80%;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #ffffff;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  background-color: #000000;
+  box-shadow: inset 0px 0px 2px rgb(255, 255, 255);
+  transition: border 0.3s, box-shadow 0.3s;
+  outline: none;
+  height: auto;
+}
 
-  @media  screen and (max-width: 715px) {
-    .dashboard{
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: inset 0 0 8px rgb(0, 102, 255);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+textarea.form-control {
+  resize: none;
+  overflow-y: auto;
+  min-height: 220px;
+  white-space: pre-wrap;
+}
+
+.form-control:hover {
+  border-color: #007bff;
+}
+
+.colors {
+  display: flex;
+
+  align-items: center;
+  gap: 15px;
+
+
+}
+
+.colorbtn {
+  width: 50px;
+}
+
+@media screen and (max-width: 715px) {
+  .dashboard {
     background-repeat: repeat-y;
-    }
-    .formcontainer{
-      width: 100%;
-    }
   }
 
-  .contentloader{
-    display: flex;
-    justify-content: center;
-    
+  .formcontainer {
+    width: 100%;
+    position: relative;
+    left: 1.5%;
   }
+
+  .notesbtn {
+    position: fixed;
+    right: -3.5%;
+    font-size: 30px;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.contentloader {
+  display: flex;
+  justify-content: center;
+
+}

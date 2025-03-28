@@ -60,7 +60,7 @@ const Login = () => {
        {verify?<div className='invalid'>Invalid Credentials </div>:<div></div> }
         <label >Email </label> <br /><input type="email" {...register("email",{required:true})}/> <br />
         <label >Password </label> <br /><input type="password" {...register("password",{required:true})}/> <br />
-        {isSubmitting?<button type='submit' disabled={isSubmitting}><Loading/></button>:<button type='submit' >Login</button>}
+        {isSubmitting?<button type='submit' disabled={isSubmitting}><Loading size={15}/></button>:<button type='submit' >Login</button>}
       </form>
       <NavLink className='signuplink' to={'/signup'}>Create New Account</NavLink>
       </div>

@@ -60,7 +60,7 @@ textarea.edit-control:focus,.edit-control-title:focus{
 @media  screen and (max-width: 715px) {
     .taskform2{
         position: relative;
-    right: 60px;
+    right: 10px;
     width: 120%;
     }
   }

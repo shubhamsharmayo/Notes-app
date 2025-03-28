@@ -14,13 +14,16 @@ const Dashboard = () => {
     const [datainuse, setdatainuse] = useState("")
     const [click, setclick] = useState(false)
     const [loader, setloader] = useState(true)
+    
    
     
     function forms(){
       setclick(!click)
+      
     }
-    function close(){
+    function closes(){
       setclick(false)
+      
     }
 
     const {
@@ -48,7 +51,7 @@ const Dashboard = () => {
       
       let res = await submit.json()
       setdatainuse((prevData) => [...prevData, res])
-      console.log(res)
+      
       
       setclick(false)
     }
@@ -77,8 +80,21 @@ const Dashboard = () => {
          }
          fetch()
         }, [nameofuser])
-        console.log(datainuse)
+        
 
+useEffect(() => {
+  let prevscroll = window.scrollY
+const handlescroll = ()=>{
+  const currentscroll = window.scrollY
+  const diff = currentscroll - prevscroll
+  console.log(diff)
+  if(diff >25 || diff <-25){
+    setclick(false)
+  }
+  prevscroll = currentscroll
+}
+window.addEventListener("scroll", handlescroll)
+}, [])
 
 
   
@@ -89,28 +105,28 @@ const Dashboard = () => {
       <Navbar/>
       <div className='dashboard-main'>
       <div className='notebtncont'>
-      <button className='notesbtn' onClick={forms}>Add Note</button>
+      <button className='notesbtn' onClick={forms}>+</button>
       </div>
         
 
-        {click?<div className='taskform'>
-          <div className='formcontainer'>
+        <div className={`taskform ${click? 'show':''}`}>
+          <div className={`formcontainer `} >
           
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} >
             <h4>ADD TASK</h4>
           <input className='form-control' type="text" {...register("title")} placeholder="Title" />
           <textarea  className='form-control' type="text" {...register("description")} placeholder="Description" ></textarea>
           <span className='colors'><label >Background  </label><input type="color" className='colorbtn'  {...register("color")} /></span>
           <div className='formbtn'>
-          <button onClick={close} >Close</button>
-          {isSubmitting?<button type="submit" disabled={isSubmitting}><Loading/></button>:<button  type="submit"  >Done</button>}
+          <button type='button' onClick={forms} >Close</button>
+          {isSubmitting?<button type="submit" disabled={isSubmitting}><Loading size={15}/></button>:<button  type="submit"  >Done</button>}
           </div>
         </form>
         </div>
-        </div>:null}
+        </div>
         
         {loader ? (
-          <div className='contentloader'><Loading/></div>
+          <div className='contentloader'><Loading size={50}/></div>
         
       ) : datainuse ? (
         <div className="dot">

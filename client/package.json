@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^1.7.6",
     "ldrs": "^1.0.2",
     "react": "^18.3.1",
