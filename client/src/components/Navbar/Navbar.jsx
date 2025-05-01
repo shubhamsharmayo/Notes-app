@@ -48,9 +48,10 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div
-        ref={sidebarRef}
-        className={`sidebar ${sidebar ? 'sidebar-open' : ''}`}
+        
+       className={`blurbar ${sidebar ? 'sidebar-open' : ''}` }
       >
+       <div ref={sidebarRef} className={`sidebar ${sidebar ? 'sidebar-open1' : ''}`}>
         <img
           onClick={close}
           className={`sidebar-logo ${sidebar ? 'sidebar-logo1' : ''}`}
@@ -75,13 +76,15 @@ const Navbar = () => {
             Starred
           </NavLink>
         </div>
+        </div>
       </div>
       <img onClick={open} className='logo' src={noteimg} alt="" />
       <div className='logout'>
         <h1>Hi {nameofuser}</h1>
         <button onClick={logout}>Logout</button>
       </div>
-    </div>
+      </div>
+    
   );
 };
 
